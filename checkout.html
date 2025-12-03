@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout</title>
+  <link rel="stylesheet" href="checkout.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+
+    <div class="header">
+    <a href="servicedetails.html" class="back-btn">
+      <i class="fa-solid fa-arrow-left"></i>
+    </a>
+    <h2 class="title">Checkout</h2>
+  </div>
+
+    <div class="section">
+      <div class="section-header">
+        <h3>Address details</h3>
+        <a href="#" class="change-link">change</a>
+      </div>
+      <div class="card">
+        <p><strong>Wcc Antipolo Campus</strong></p>
+        <p>156 M. L. Quezon Ave, Antipolo City, 1870 Rizal</p>
+        <p>+63  0997 781 5423</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <h3>Car Type</h3>
+      <div class="card">
+        <label><input type="radio" name="car" checked> Sedan</label>
+        <label><input type="radio" name="car"> SUV</label>
+      </div>
+    </div>
+
+    <div class="section total">
+      <h3>Total</h3>
+      <p class="amount">₱ 2,456</p>
+    </div>
+
+    <button class="pay-btn" onclick="window.location.href='payment.html'">
+      Proceed to payment
+    </button>
+
+
+
+    <div class="bottom-nav">
+      <a href="#"><i class="fa-solid fa-house"></i></a>
+      <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+      <a href="#"><i class="fa-regular fa-heart"></i></a>
+      <a href="#"><i class="fa-regular fa-clock"></i></a>
+    </div>
+  </div>
+</body>
+</html>

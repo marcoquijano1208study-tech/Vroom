@@ -1,0 +1,132 @@
+/* Background */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #2f4f2f; /* same dark green bg */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* Receipt container (pareho ng home container style mo) */
+.receipt-container {
+  background: #fff;
+  width: 360px;
+  min-height: 600px;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+/* Header */
+.receipt-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.receipt-header h2 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #2e5c2e;
+  margin: 0;
+}
+
+/* Info / Details */
+.receipt-info {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.receipt-info p {
+  margin: 6px 0;
+}
+
+/* Items Table */
+.items {
+  margin-bottom: 15px;
+}
+
+.items table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.items th, .items td {
+  padding: 8px 5px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.items th {
+  font-weight: 600;
+  color: #2e5c2e;
+}
+
+/* Total */
+.total {
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  font-weight: 700;
+  margin-top: 10px;
+  color: #2e5c2e;
+}
+
+/* Button */
+.receipt-container button {
+  margin-top: auto;
+  background: #2e5c2e;
+  color: #fff;
+  padding: 14px;
+  border: none;
+  border-radius: 30px;
+  font-weight: 700;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.receipt-container button:hover {
+  background: #244824;
+}
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #2f4f2f;
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+    }
+    .container {
+      background: #fff;
+      width: 360px;
+      padding: 20px;
+      border-radius: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      text-align: center;
+    }
+    h2 {
+      color: #2e5c2e;
+      margin-bottom: 20px;
+    }
+    .details {
+      text-align: left;
+      margin: 20px 0;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+    .total {
+      font-size: 18px;
+      font-weight: bold;
+      color: #2e5c2e;
+      margin-top: 20px;
+    }
+
