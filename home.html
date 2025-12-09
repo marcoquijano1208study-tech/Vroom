@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VROOM Home</title>
+  <link rel="stylesheet" href="home.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <div class="container">
+
+    <header class="top-bar">
+      <button class="menu-btn" id="menu-btn"><i class="fas fa-bars"></i></button>
+      <form id="search-form" class="search-bar">
+        <input type="text" id="search-input" placeholder="Search services...">
+      </form>
+      <img src="Wcc Logo.jpg" alt="Logo" class="logo">
+    </header>
+
+    <div class="overlay" id="overlay"></div>
+
+    <aside class="sidebar" id="sidebar">
+      <ul>
+        <li><a href="settings.html"><i class="fas fa-gear"></i> Account Settings</a></li>
+        <li><a href="wallet.html"><i class="fas fa-wallet"></i> Wallet</a></li>
+        <li><a href="offers.html"><i class="fas fa-gift"></i> Offers</a></li>
+        <li><a href="help.html"><i class="fas fa-headset"></i> Help</a></li>
+        <li><a href="rate.html"><i class="fas fa-star"></i> Rate the App</a></li>
+      </ul>
+    </aside>
+
+    <main class="content">
+
+      <div class="promo-cards">
+        <div class="card">
+          <strong>25% off</strong><br>
+          <small>Valid until 25th April 2026</small>
+        </div>
+        <div class="card">
+          <strong>50% off</strong><br>
+          <small>Valid until 25th June 2026</small>
+        </div>
+      </div>
+
+      <div class="discount-banner">
+        Use code <span class="highlight">WCCANTICY</span> to get 
+        <span class="highlight">10% off</span> on services.
+      </div>
+
+      <nav class="tabs">
+        <a href="#" class="active">Promos</a>
+        <a href="services.html">Services</a>
+        <a href="#">Maintenance</a>
+        <a href="#">Others</a>
+      </nav>
+
+      <section class="services">
+        <a href="servicedetails.html" class="service-card">
+          <img src="car aircon.jpg" alt="Car Aircon">
+          <h3>Car Aircon Repair</h3>
+          <p>₱ 2,499</p>
+          <span>⭐ 4.4/5</span>
+        </a>
+
+        <a href="service-deepclean.html" class="service-card">
+          <img src="deep cleen.jpg" alt="Deep Clean">
+          <h3>Deep Clean</h3>
+          <p>₱ 650</p>
+          <span>⭐ 4.4/5</span>
+        </a>
+      </section>
+    </main>
+
+    <footer class="bottom-nav">
+      <a href="home.html" class="active"><i class="fas fa-home"></i></a>
+      <a href="#"><i class="fas fa-calendar"></i></a>
+      <a href="#"><i class="fas fa-heart"></i></a>
+      <a href="#"><i class="fas fa-user"></i></a>
+    </footer>
+
+  </div>
+
+  <script src="home.js"></script>
+</body>
+</html>

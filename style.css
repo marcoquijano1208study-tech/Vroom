@@ -1,0 +1,62 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body, html {
+  height: 100%;
+  background: #2f4f2f;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+  position: relative;
+  width: 360px;
+  height: 640px;
+  margin: 40px auto;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  overflow: hidden;
+
+  background: url("backroundVroom.jpg") no-repeat center center;
+  background-size: cover;
+  padding: 20px;
+}
+
+.logo {
+  font-family: 'Arial Black', Arial, sans-serif;
+  font-weight: 900;
+  font-size: 2.5rem;
+  color: #34562a;
+  margin-bottom: 10px;
+  line-height: 1.2;
+  position: relative;
+  z-index: 10;
+}
+.logo small {
+  font-weight: 400;
+  font-size: 0.8rem;
+  color: #555;
+}
+
+#register-btn {
+  position: absolute;
+  bottom: 100px; 
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #3f633f;
+  border: none;
+  border-radius: 25px;
+  color: white;
+  padding: 15px 50px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(63,99,63,0.6);
+  transition: background-color 0.3s ease;
+  z-index: 20;
+}
+
+#register-btn:hover {
+  background-color: #2e482e;
+}

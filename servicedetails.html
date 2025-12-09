@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Service Details</title>
+
+
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+  <link rel="stylesheet" href="servicedetails.css" />
+</head>
+<body>
+  <div class="container">
+
+    <div class="top-bar">
+      <a href="home.html" class="back-btn"><i class="fas fa-arrow-left"></i></a>
+      <div class="page-title">Service Details</div>
+      <button class="fav-btn" aria-label="favorite"><i class="far fa-heart"></i></button>
+    </div>
+
+    <div class="service-image">
+      <img src="car aircon.jpg" alt="Car Aircon Repair" />
+      <div class="dots">
+        <span class="active"></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+
+
+    <div class="service-info">
+      <h2 id="serviceName">Car Aircon Repair</h2>
+      <p class="price" id="servicePrice">₱ 2,499</p>
+    </div>
+
+    <div class="details">
+      <h4>Description</h4>
+      <p>
+        Diagnosing and fixing problems within a vehicle’s air conditioning system,
+        such as leaks or component failures, to restore its cooling ability.
+      </p>
+
+      <h4>Discounts/Coupon</h4>
+      <p>
+        Any Car Wash shops near Antipolo will acknowledge any type of discounts or coupon.
+        You’ll get discounts via loyalty card or promo codes.
+      </p>
+
+      <h4>Reviews <span class="reviews">4.4/5</span> <a href="#">see all reviews</a></h4>
+    </div>
+
+    <div class="action">
+      <button class="add-btn" id="addCartBtn" type="button">
+        <i class="fas fa-shopping-cart"></i>
+        <span class="btn-text">Add to Cart</span>
+      </button>
+
+      <button class="cart-btn" id="goCartBtn" type="button" aria-label="Go to cart">
+        <i class="fas fa-shopping-basket"></i>
+      </button>
+    </div>
+
+    <footer class="bottom-nav">
+      <a href="home.html"><i class="fas fa-home"></i></a>
+      <a href="checkout.html"><i class="fas fa-shopping-cart"></i></a>
+      <a href="#"><i class="far fa-heart"></i></a>
+      <a href="#"><i class="far fa-clock"></i></a>
+    </footer>
+  </div>
+
+  <script src="servicedetails.js"></script>
+</body>
+</html>

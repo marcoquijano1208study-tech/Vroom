@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scan QR</title>
+  <link rel="stylesheet" href="scanqr.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+
+    <div class="header">
+      <a href="payment.html" class="back-btn">
+        <i class="fa-solid fa-arrow-left"></i>
+      </a>
+      <h2 class="title">Scan QR</h2>
+    </div>
+
+    <div class="main-content">
+      <img src="skyline.jpg" alt="Car Image" class="car-img">
+
+      <h2 class="thankyou">Thank you for inquiring!</h2>
+
+      <a href="receipt.html" target="_blank">
+        <img src="Receipt.jpg" alt="QR Code" class="qr-img">
+      </a>
+
+      <h3>Click The QR for receipt</h3>
+
+      <p class="instruction">
+        Go to your nearest car wash stop and let them scan this QR Code!
+      </p>
+
+      <div class="btn-group">
+        <button class="explore-btn" onclick="window.location.href='Home.html'">Explore</button>
+        <button class="cancel-btn" onclick="window.location.href='payment.html'">Cancel Order</button>
+      </div>
+    </div>
+
+    <div class="bottom-nav">
+      <a href="index.html"><i class="fa-solid fa-house"></i></a>
+      <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+      <a href="favorites.html"><i class="fa-regular fa-heart"></i></a>
+      <a href="orders.html"><i class="fa-regular fa-clock"></i></a>
+    </div>
+  </div>
+</body>
+</html>

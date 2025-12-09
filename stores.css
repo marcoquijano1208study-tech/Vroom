@@ -1,0 +1,226 @@
+/* === BACKGROUND SAME SA HOME === */
+body {
+    margin: 0;
+    padding: 0;
+    background: #2b4d2b;
+    font-family: Arial, sans-serif;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* === PHONE STYLE CONTAINER === */
+.container {
+    width: 380px;
+    height: 700px;
+    background: #2e5a2e;
+    border-radius: 22px;
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+}
+
+/* === HEADER SAME STYLE === */
+.header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.back-btn i {
+    font-size: 22px;
+    color: white;
+}
+
+.title {
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+}
+
+/* === WHITE LIST CARD === */
+.store-list {
+    background: white;
+    padding: 20px;
+    border-radius: 18px;
+    margin-top: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.15);
+
+    flex-grow: 1;
+    overflow-y: auto;
+}
+
+/* === INDIVIDUAL STORE CARD === */
+.store-box {
+    background: #f5f5f5;
+    padding: 15px;
+    border-radius: 14px;
+    margin-bottom: 12px;
+    display: flex;
+    flex-direction: column;
+    border-left: 6px solid #144a28;
+}
+
+/* Store name */
+.store-box h3 {
+    margin: 0;
+    color: #003b15;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* Store address */
+.store-box p {
+    margin: 5px 0 0;
+    color: #333;
+    font-size: 14px;
+}
+
+/* === Buttons inside list === */
+.store-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.store-actions button {
+    flex: 1;
+    padding: 8px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.edit-btn {
+    background: #003b15;
+    color: white;
+}
+
+.delete-btn {
+    background: #7d0000;
+    color: white;
+}
+
+.edit-btn:hover {
+    background: #035a23;
+}
+
+.delete-btn:hover {
+    background: #aa0000;
+}
+
+/* === BOTTOM NAV SAME === */
+.bottom-nav {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    background: #144a28;
+    padding: 10px;
+    border-radius: 14px;
+
+    display: flex;
+    justify-content: space-around;
+}
+
+.bottom-nav a {
+    font-size: 22px;
+    color: white;
+}
+
+/* === INDIVIDUAL STORE CARD — UPGRADED DESIGN === */
+.store-box {
+    background: #ffffff;
+    padding: 18px;
+    border-radius: 18px;
+    margin-bottom: 16px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+
+    /* Modern shadow */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+
+    /* Accent left border */
+    border-left: 6px solid #1e6f3c;
+
+    transition: transform 0.15s ease, box-shadow 0.2s ease;
+}
+
+/* Hover effect para may "lift" animation */
+.store-box:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+}
+
+/* Store name */
+.store-box h3 {
+    margin: 0;
+    color: #003b15;
+    font-weight: 800;
+    font-size: 20px;
+    letter-spacing: 0.5px;
+}
+
+/* Store description + location + phone */
+.store-box p {
+    margin: 3px 0;
+    color: #444;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+/* Highlight price */
+.store-price {
+    color: #0a4f26;
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 4px;
+}
+
+/* === Inside Buttons Redesigned === */
+.store-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 12px;
+}
+
+.store-actions button {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+    transition: 0.15s ease;
+}
+
+/* Edit button */
+.edit-btn {
+    background: #1b6e37;
+    color: white;
+}
+
+.edit-btn:hover {
+    background: #238c47;
+}
+
+/* Delete button */
+.delete-btn {
+    background: #b30000;
+    color: white;
+}
+
+.delete-btn:hover {
+    background: #d40000;
+}

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QR Code Receipt</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <link rel="stylesheet" href="qr.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Scan to View Receipt</h2>
+    <div id="qrcode"></div>
+  </div>
+
+  <script>
+    new QRCode(document.getElementById("qrcode"), {
+      text: window.location.origin + "/receipt.html", 
+      width: 200,
+      height: 200
+    });
+  </script>
+</body>
+</html>

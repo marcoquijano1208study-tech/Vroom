@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Location</title>
+  <link rel="stylesheet" href="location.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<div class="container">
+
+  <!-- TOP HEADER -->
+  <div class="top-header">
+    <a href="checkout.html" class="back-icon">
+      <i class="fa-solid fa-arrow-left"></i>
+    </a>
+    <p class="header-title">Checkout</p>
+  </div>
+
+  <!-- PAGE TITLE -->
+  <h1 class="page-title">Location</h1>
+
+  <!-- LOCATION BOX -->
+  <div class="section-title">
+    Location and situation 
+    <a href="location-edit.html" class="change-btn">change</a>
+  </div>
+
+  <div class="location-box">
+    <p class="loc-main" id="locMain"></p>
+    <p class="loc-sub" id="locSub1"></p>
+    <p class="loc-sub" id="locSub2"></p>
+  </div>
+
+  <!-- SERVICE SELECTION -->
+  <div class="section-title">Select service</div>
+
+  <div class="service-box">
+    <label class="radio-option">
+      <input type="radio" name="service" checked>
+      <span>Tow to nearest auto-repair</span>
+    </label>
+
+    <label class="radio-option">
+      <input type="radio" name="service">
+      <span>On-road service</span>
+    </label>
+
+    <label class="radio-option">
+      <input type="radio" name="service" checked>
+      <span>Drive-in auto-repair</span>
+    </label>
+  </div>
+
+
+  <button class="pay-btn" onclick="window.location.href='payment.html'">
+      Proceed
+  </button>
+
+  <!-- BOTTOM NAV -->
+  <div class="bottom-nav">
+    <a href="home.html"><i class="fa-solid fa-house"></i></a>
+    <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+    <a href="#"><i class="fa-regular fa-heart"></i></a>
+    <a href="account.html"><i class="fa-solid fa-user"></i></a>
+  </div>
+
+</div>
+
+<!-- LOAD SAVED LOCATION -->
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    document.getElementById("locMain").textContent =
+      localStorage.getItem("locMain") || "No location set";
+
+    document.getElementById("locSub1").textContent =
+      localStorage.getItem("locSub1") || "";
+
+    document.getElementById("locSub2").textContent =
+      localStorage.getItem("locSub2") || "";
+  });
+</script>
+
+</body>
+</html>

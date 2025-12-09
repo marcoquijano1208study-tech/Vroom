@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment</title>
+  <link rel="stylesheet" href="payment.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+
+    <div class="header">
+      <a href="home.html" class="back-btn">
+        <i class="fa-solid fa-arrow-left"></i>
+      </a>
+      <h2 class="title">Checkout</h2>
+    </div>
+
+    <h2 class="payment-title">Payment</h2>
+
+    <div class="section">
+      <h3>Payment method</h3>
+      <div class="card">
+        <label>
+          <input type="radio" name="payment" checked>
+          <i class="fa-solid fa-wallet" style="color: orange;"></i> Gcash
+        </label>
+        <label>
+          <input type="radio" name="payment">
+          <i class="fa-solid fa-building-columns" style="color: crimson;"></i> Bank
+        </label>
+        <label>
+          <input type="radio" name="payment">
+          <i class="fa-solid fa-money-bill-wave" style="color: purple;"></i> Cash
+        </label>
+      </div>
+    </div>
+
+      <button class="pay-btn" onclick="window.location.href='scanqr.html'">
+        Proceed to payment
+    </button>
+
+    <div class="bottom-nav">
+      <a href="#"><i class="fa-solid fa-house"></i></a>
+      <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+      <a href="#"><i class="fa-regular fa-heart"></i></a>
+      <a href="#"><i class="fa-regular fa-clock"></i></a>
+    </div>
+  </div>
+</body>
+</html>

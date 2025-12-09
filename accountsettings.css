@@ -1,0 +1,116 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #1e4d2b; /* dark green background like screenshot */
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  padding: 15px;
+  padding-bottom: 100px; /* for bottom nav */
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.header i {
+  color: white;
+  font-size: 20px;
+}
+
+.title {
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/* PROFILE CARD */
+.profile-card {
+  background: white;
+  border-radius: 15px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  margin-bottom: 20px;
+}
+
+.avatar {
+  width: 60px;
+  height: 60px;
+  background: #ccf0d6;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.avatar i {
+  font-size: 28px;
+  color: #1e4d2b;
+}
+
+.info h3 {
+  margin: 0;
+  font-size: 18px;
+  color: #333;
+}
+
+.info p {
+  margin: 3px 0 0;
+  font-size: 14px;
+  color: #555;
+}
+
+/* MENU CARDS (OPTIONS) */
+.menu-card {
+  background: white;
+  padding: 14px 18px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+  font-size: 16px;
+  color: #333;
+  cursor: pointer;
+  box-shadow: 0 2px 7px rgba(0,0,0,0.12);
+}
+
+.menu-card i {
+  font-size: 18px;
+  color: #1e4d2b;
+}
+
+.menu-card.logout {
+  background: #ffe1e1;
+  color: #b30000;
+}
+
+.menu-card.logout i {
+  color: #b30000;
+}
+
+/* BOTTOM NAVIGATION */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #14361f;
+  padding: 12px 0;
+  display: flex;
+  justify-content: space-around;
+  border-radius: 20px 20px 0 0;
+}
+
+.bottom-nav a {
+  color: white;
+  font-size: 22px;
+}

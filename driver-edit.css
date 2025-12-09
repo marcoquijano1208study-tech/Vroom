@@ -1,0 +1,122 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* PAGE BACKGROUND */
+body {
+  background: #234523;
+  display: flex;
+  justify-content: center;
+  padding-top: 35px;
+}
+
+/* MAIN PHONE CONTAINER */
+.container {
+  width: 410px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 22px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.18);
+  position: relative;
+  min-height: 700px;
+}
+
+/* HEADER */
+.top-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.back-icon i {
+  font-size: 22px;
+  color: #000;
+}
+
+.header-title {
+  flex: 1;
+  text-align: center;
+  font-weight: 700;
+  font-size: 19px;
+  margin-right: 25px;
+}
+
+/* SECTION TITLE */
+.section-title {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+/* CARD STYLE */
+.edit-box {
+  background: #ffffff;
+  padding: 18px;
+  border-radius: 14px;
+  border: 1px solid #e6e6e6;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+  margin-bottom: 20px;
+}
+
+/* BOLD LABELS */
+.input-label {
+  font-weight: 700;     /* 👉 bold yung Name at Phone Number */
+  font-size: 14px;
+  margin-bottom: 6px;
+  display: block;
+}
+
+/* INPUTS */
+.edit-box input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  outline: none;
+  font-size: 15px;
+  color: #333;
+}
+
+/* SAVE BUTTON (GREEN + BOLD) */
+.save-btn {
+  width: 100%;
+  padding: 16px;
+  background: #2f8a3a;
+  color: white;
+  border: none;
+  border-radius: 35px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 20px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.12);
+  transition: 0.2s;
+}
+
+.save-btn:hover {
+  background: #267a31;
+  transform: translateY(-1px);
+}
+
+
+/* BOTTOM NAV */
+.bottom-nav {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 13px 0;
+  background: #ffffff;
+  border-top: 1px solid #ddd;
+  border-radius: 0 0 22px 22px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.bottom-nav i {
+  font-size: 21px;
+  color: #666;
+}

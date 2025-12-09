@@ -1,0 +1,77 @@
+body {
+  font-family: "Arial", sans-serif;
+  background: #f2f2f2;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.container {
+  width: 320px;
+  background: white;
+  padding: 40px 25px 25px 25px;  /* 🔥 Dinagdagan ko top padding from 25px → 40px */
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  position: relative;
+}
+
+/* Top decorative edge */
+.container::before,
+.container::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 12px;
+  background: repeating-linear-gradient(
+    90deg,
+    transparent 0px,
+    transparent 10px,
+    white 10px,
+    white 20px
+  );
+}
+
+.container::before {
+  top: -12px;
+}
+.container::after {
+  bottom: -12px;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  letter-spacing: 3px;
+}
+
+.detail {
+  display: block;
+  margin-bottom: 12px;
+}
+
+.label {
+  font-weight: bold;
+  display: block;     /* 👉 Para pababa, isang line lang */
+  margin-bottom: 3px;
+}
+
+.value {
+  font-size: 15px;
+  border-bottom: 1px dashed #999;
+  padding-bottom: 5px;
+}
+
+.total-box {
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top: 2px solid #000;
+}
+
+.thank {
+  text-align: center;
+  margin-top: 20px;
+  font-weight: bold;
+  letter-spacing: 3px;
+}

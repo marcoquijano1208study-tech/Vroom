@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edit Location</title>
+  <link rel="stylesheet" href="location-edit.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<div class="container">
+
+  <!-- HEADER -->
+  <div class="top-header">
+    <a href="location.html" class="back-icon">
+      <i class="fa-solid fa-arrow-left"></i>
+    </a>
+    <p class="header-title">Edit Location</p>
+  </div>
+
+  <!-- PAGE TITLE -->
+  <h1 class="page-title">Enter your location</h1>
+
+  <!-- INPUTS -->
+  <div class="input-group">
+    <label>Main Location</label>
+    <input type="text" id="mainLocInput" placeholder="Ex: Westmont Street and Laguna Drive">
+  </div>
+
+  <div class="input-group">
+    <label>Landmark</label>
+    <input type="text" id="subLocInput1" placeholder="Ex: Infront of Blue Horizon Apartments">
+  </div>
+
+  <div class="input-group">
+    <label>Situation</label>
+    <input type="text" id="subLocInput2" placeholder="Ex: Engine stalled while leaving intersection">
+  </div>
+
+  <button class="save-btn" onclick="saveLocation()">
+    Save Location
+  </button>
+
+</div>
+
+<script>
+  // Load existing saved data into fields
+  document.addEventListener("DOMContentLoaded", () => {
+    document.getElementById("mainLocInput").value = localStorage.getItem("locMain") || "";
+    document.getElementById("subLocInput1").value = localStorage.getItem("locSub1") || "";
+    document.getElementById("subLocInput2").value = localStorage.getItem("locSub2") || "";
+  });
+
+  function saveLocation() {
+    const main = document.getElementById("mainLocInput").value;
+    const sub1 = document.getElementById("subLocInput1").value;
+    const sub2 = document.getElementById("subLocInput2").value;
+
+    localStorage.setItem("locMain", main);
+    localStorage.setItem("locSub1", sub1);
+    localStorage.setItem("locSub2", sub2);
+
+    window.location.href = "location.html"; // return
+  }
+</script>
+
+</body>
+</html>

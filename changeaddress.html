@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Change Address</title>
+  <link rel="stylesheet" href="checkout.css">
+</head>
+<body>
+
+  <div class="container">
+
+    <div class="header">
+      <a href="checkout.html" class="back-btn">
+        <i class="fa-solid fa-arrow-left"></i>
+      </a>
+      <h2 class="title">Change Address</h2>
+    </div>
+
+    <div class="card" style="padding:20px;">
+      <label>Full Name</label>
+      <input type="text" id="newName">
+
+      <label>Address</label>
+      <input type="text" id="newAddress">
+
+      <label>Phone Number</label>
+      <input type="text" id="newNumber">
+
+      <button class="pay-btn" style="margin-top:20px;" onclick="saveAddress()">
+        Save Address
+      </button>
+    </div>
+
+  </div>
+
+  <script src="checkout.js"></script>
+</body>
+</html>

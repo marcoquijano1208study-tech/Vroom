@@ -1,0 +1,164 @@
+/* GLOBAL RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* WHOLE BACKGROUND */
+body {
+  background: #234523;
+  display: flex;
+  justify-content: center;
+  padding-top: 40px;
+}
+
+/* PHONE CONTAINER (ADJUSTED SIZE) */
+.container {
+  width: 410px;          /* ✔ MATCHING YOUR CHECKOUT SIZE */
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 22px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.18);
+  position: relative;
+  min-height: 700px;     /* ✔ para hindi masikip */
+}
+
+/* HEADER */
+.top-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.back-icon i {
+  font-size: 22px;
+  color: #000;
+}
+
+.header-title {
+  flex: 1;
+  text-align: center;
+  font-weight: 700;
+  font-size: 19px;
+  margin-right: 25px;
+}
+
+/* TITLE */
+.page-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 12px 0 17px;
+}
+
+/* SECTION LABEL */
+.section-title {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+}
+
+.change-btn {
+  font-size: 12px;
+  color: #6d55e0;
+  margin-left: 6px;
+  text-decoration: none;
+}
+
+/* LOCATION BOX */
+.location-box {
+  background: #ffffff;
+  padding: 18px;
+  border-radius: 14px;
+  border: 1px solid #e6e6e6;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+  margin-bottom: 25px;
+}
+
+.loc-main {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.loc-sub {
+  font-size: 14px;
+  color: #444;
+  margin-bottom: 3px;
+}
+
+/* SERVICE BOX */
+.service-box {
+  background: #ffffff;
+  padding: 18px;
+  border-radius: 14px;
+  border: 1px solid #e6e6e6;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+  margin-top: 8px;
+  margin-bottom: 30px;
+}
+
+.radio-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+/* TOTAL */
+.total-box {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+  font-size: 16px;
+}
+
+.total-price {
+  font-size: 19px;
+  font-weight: 800;
+  color: #2d6b35;
+}
+
+/* PROCEED BUTTON (BIGGER + CLEANER) */
+.pay-btn {
+  width: 100%;
+  padding: 16px;
+  background: #2f8a3a;
+  color: white;
+  border: none;
+  border-radius: 35px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 85px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.12);
+  transition: 0.2s;
+}
+
+.pay-btn:hover {
+  background: #267a31;
+  transform: translateY(-1px);
+}
+
+/* BOTTOM NAV */
+.bottom-nav {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 13px 0;
+  background: #ffffff;
+  border-top: 1px solid #ddd;
+  border-radius: 0 0 22px 22px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.bottom-nav a i {
+  font-size: 21px;
+  color: #666;
+}

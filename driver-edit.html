@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Edit Driver</title>
+  <link rel="stylesheet" href="driver-edit.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<div class="container">
+
+  <!-- HEADER -->
+  <div class="header">
+    <a href="checkout.html" class="back-btn">
+      <i class="fa-solid fa-arrow-left"></i>
+    </a>
+    <h2 class="title">Checkout</h2>
+  </div>
+
+  <!-- TITLE -->
+  <h3 class="section-title">Driver Information</h3>
+
+  <!-- CARD -->
+  <div class="edit-box">
+    <label class="input-label">Name</label>
+    <input type="text" id="driverNameInput" placeholder="Enter name">
+  </div>
+
+  <div class="edit-box">
+    <label class="input-label">Phone Number</label>
+    <input type="text" id="driverPhoneInput" placeholder="Enter phone number">
+  </div>
+
+  <!-- SAVE BUTTON -->
+  <button class="save-btn" id="saveDriver">Save</button>
+
+  <!-- NAVIGATION -->
+  <div class="bottom-nav">
+    <a href="home.html"><i class="fa-solid fa-house"></i></a>
+    <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+    <a href="#"><i class="fa-regular fa-heart"></i></a>
+    <a href="#"><i class="fa-regular fa-clock"></i></a>
+  </div>
+
+</div>
+
+<script>
+  // Load saved values
+  document.getElementById("driverNameInput").value = localStorage.getItem("driverName") || "";
+  document.getElementById("driverPhoneInput").value = localStorage.getItem("driverPhone") || "";
+
+  // Save new info
+  document.getElementById("saveDriver").addEventListener("click", () => {
+    localStorage.setItem("driverName", document.getElementById("driverNameInput").value);
+    localStorage.setItem("driverPhone", document.getElementById("driverPhoneInput").value);
+    window.location.href = "checkout.html";
+  });
+</script>
+
+</body>
+</html>

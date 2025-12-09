@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Book a Driver - Checkout</title>
+
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+/>
+
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #2f4f2f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+
+  .container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 20px;
+    width: 360px;
+    max-width: 95%;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .back-btn {
+    color: #2f4f2f;
+    font-size: 20px;
+    text-decoration: none;
+    margin-right: 10px;
+  }
+
+  .header .title {
+    font-size: 22px;
+    font-weight: bold;
+    flex: 1;
+    text-align: center;
+    color: #2f4f2f;
+  }
+
+  .section {
+    margin-bottom: 20px;
+  }
+
+  .section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  .section-header h3 {
+    font-size: 16px;
+    font-weight: bold;
+    color: #2f4f2f;
+  }
+
+  .section-header .change-link {
+    font-size: 14px;
+    color: #3f633f;
+    text-decoration: none;
+  }
+
+  .card {
+    background-color: #f5f5f5;
+    padding: 15px;
+    border-radius: 15px;
+  }
+
+  #pickupLocation {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+
+  input[type="radio"] {
+    margin-right: 8px;
+  }
+
+  .pay-btn {
+    background-color: #3f633f;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    width: 100%;
+    transition: background-color 0.3s ease;
+  }
+
+  .pay-btn:hover {
+    background-color: #2f4f2f;
+  }
+
+  .bottom-nav {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+  }
+
+  .bottom-nav a {
+    color: #2f4f2f;
+    font-size: 20px;
+    text-decoration: none;
+  }
+</style>
+
+</head>
+<body>
+  <div class="container">
+
+    <div class="header">
+      <a href="checkout.html" class="back-btn"><i class="fa-solid fa-arrow-left"></i></a>
+      <h2 class="title">Checkout</h2>
+    </div>
+
+    <!-- DRIVER INFORMATION -->
+    <div class="section">
+      <div class="card">
+        <p><strong id="driverNameTxt"></strong></p>
+        <p id="driverPhoneTxt"></p>
+      </div>
+    </div>
+
+    <!-- CAR TYPE -->
+    <div class="section">
+      <h3>Car Type</h3>
+      <div class="card">
+        <label><input type="radio" name="car" value="Sedan" checked /> Sedan</label>
+        <label><input type="radio" name="car" value="SUV" /> SUV</label>
+      </div>
+    </div>
+
+    <!-- PICKUP LOCATION -->
+    <div class="section">
+      <h3>Car Location</h3>
+      <div class="card">
+        <input type="text" id="pickupLocation" placeholder="Enter your current location" />
+      </div>
+    </div>
+
+    <!-- PROCEED BUTTON -->
+    <button class="pay-btn" id="proceedBtn">Proceed to Payment</button>
+
+    <div class="bottom-nav">
+      <a href="#"><i class="fa-solid fa-house"></i></a>
+      <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+      <a href="#"><i class="fa-regular fa-heart"></i></a>
+      <a href="#"><i class="fa-regular fa-clock"></i></a>
+    </div>
+
+  </div>
+
+  <script>
+    // Load saved driver info or defaults
+    const savedName = localStorage.getItem("driverName") || "Juan Dela Crux";
+    const savedPhone = localStorage.getItem("driverPhone") || "+63 0997 781 5423";
+
+    document.getElementById("driverNameTxt").textContent = savedName;
+    document.getElementById("driverPhoneTxt").textContent = savedPhone;
+
+    // Make button clickable and store info
+    document.getElementById("proceedBtn").addEventListener("click", () => {
+      const carType = document.querySelector('input[name="car"]:checked').value;
+      const location = document.getElementById("pickupLocation").value.trim();
+
+      if(location === "") {
+        alert("Please enter your pickup location.");
+        return;
+      }
+
+      localStorage.setItem("carType", carType);
+      localStorage.setItem("pickupLocation", location);
+
+      window.location.href = "payment.html"; // Redirect to payment page
+    });
+  </script>
+</body>
+</html>

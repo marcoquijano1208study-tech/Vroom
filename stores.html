@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Stores</title>
+  <link rel="stylesheet" href="stores.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <div class="header">
+      <a href="home.html" class="back-btn">
+        <i class="fa-solid fa-arrow-left"></i>
+      </a>
+      <h2 class="title">Available Stores</h2>
+    </div>
+
+    <!-- Stores List -->
+    <div id="storeContainer" class="store-list"></div>
+
+    <!-- Bottom Navigation -->
+    <footer class="bottom-nav">
+      <a href="home.html"><i class="fas fa-home"></i></a>
+      <a href="stores.html" class="active"><i class="fas fa-store"></i></a>
+      <a href="#"><i class="far fa-heart"></i></a>
+      <a href="account.html"><i class="fas fa-user"></i></a>
+    </footer>
+  </div>
+
+  <script>
+    const container = document.getElementById("storeContainer");
+    const stores = JSON.parse(localStorage.getItem("stores")) || [];
+
+    if (stores.length === 0) {
+      container.innerHTML = `<p class="empty">No stores found. Create one in Settings.</p>`;
+    } else {
+      stores.forEach((store, index) => {
+        const card = document.createElement("div");
+        card.classList.add("store-box");
+        card.innerHTML = `
+          <h3>${store.name}</h3>
+          <p class="location">
+            <i class="fa-solid fa-location-dot"></i> ${store.location}
+          </p>
+          <p class="desc">${store.desc}</p>
+          <p class="phone">
+            <i class="fa-solid fa-phone"></i> ${store.phone || "No phone"}
+          </p>
+          <p class="store-price">Starting at: ₱${store.price || "0"}</p>
+          <div class="store-actions">
+            <button class="edit-btn" onclick="viewStore(${index})">Proceed</button>
+          </div>
+        `;
+        container.appendChild(card);
+      });
+    }
+
+    function viewStore(index) {
+      const stores = JSON.parse(localStorage.getItem("stores")) || [];
+      const selectedStore = stores[index];
+      if (selectedStore) {
+        localStorage.setItem("selectedStoreName", selectedStore.name);
+        localStorage.setItem("selectedStorePrice", selectedStore.price);
+      }
+      window.location.href = "checkout.html";
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,148 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #2f4f2f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  background-color: #3e5c3e;
+  padding: 20px;
+  border-radius: 15px;
+  width: 350px;
+  height: 640px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+}
+
+.container h2 {
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.container a {
+  color: #ddd;
+  font-size: 14px;
+  text-decoration: none;
+  float: right;
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  text-align: left;
+  color: #fff;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+input[type="email"],
+input[type="password"] {
+  width: 95%;
+  padding: 6px 10px; 
+  margin-bottom: 12px;
+  border: none;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+.remember {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  color: #fff;
+  font-size: 13px;
+}
+
+.remember input {
+  margin-right: 5px;
+}
+
+.btn {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 25px;
+  margin: 8px 0;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.btn.black {
+  background-color: #000;
+  color: #fff;
+}
+
+.btn.black:hover {
+  background-color: #222;
+}
+
+.btn.google {
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #ccc;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #ccc;
+  font-size: 12px;
+  margin: 15px 0;
+}
+
+.divider::before, .divider::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid #ccc;
+}
+
+.divider:not(:empty)::before {
+  margin-right: .5em;
+}
+
+.divider:not(:empty)::after {
+  margin-left: .5em;
+}
+
+.form {
+  display: none;
+}
+.form.active {
+  display: block;
+}
+
+.switch-text {
+  margin-top: 15px;
+  color: #fff;
+  font-size: 13px;
+}
+
+.logo-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.logo-footer img {
+  height: 35px; 
+  margin-right: 8px;
+}
+
+.logo-footer span {
+  font-size: 22px;
+  font-weight: bold;
+  color: #fff;
+  letter-spacing: 2px;
+}

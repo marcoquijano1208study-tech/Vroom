@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Checkout</title>
+  <link rel="stylesheet" href="checkout.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
+</head>
+<body>
+  <div class="container">
+
+    <div class="header">
+      <a href="stores.html" class="back-btn">
+        <i class="fa-solid fa-arrow-left"></i>
+      </a>
+      <h2 class="title">Checkout</h2>
+    </div>
+
+    <!-- DRIVER INFORMATION -->
+    <div class="section">
+      <div class="section-header">
+        <h3>Driver Information</h3>
+        <a href="driver-edit.html" class="change-link">change</a>
+      </div>
+      <div class="card">
+        <p><strong id="driverNameTxt"></strong></p>
+        <p id="driverPhoneTxt"></p>
+      </div>
+    </div>
+
+    <!-- CAR TYPE -->
+    <div class="section">
+      <h3>Car Type</h3>
+      <div class="card">
+        <label><input type="radio" name="car" value="Sedan" checked /> Sedan</label>
+        <label><input type="radio" name="car" value="SUV" /> SUV</label>
+      </div>
+    </div>
+
+    <button class="pay-btn" id="proceedBtn">Proceed</button>
+
+    <div class="bottom-nav">
+      <a href="#"><i class="fa-solid fa-house"></i></a>
+      <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+      <a href="#"><i class="fa-regular fa-heart"></i></a>
+      <a href="#"><i class="fa-regular fa-clock"></i></a>
+    </div>
+  </div>
+
+  <script>
+    // Load saved info OR default values
+    const savedName = localStorage.getItem("driverName") || "Juan Dela Crux";
+    const savedPhone = localStorage.getItem("driverPhone") || "+63 0997 781 5423";
+
+    document.getElementById("driverNameTxt").textContent = savedName;
+    document.getElementById("driverPhoneTxt").textContent = savedPhone;
+
+    document.getElementById("proceedBtn").addEventListener("click", () => {
+      const carType = document.querySelector('input[name="car"]:checked').value;
+
+      localStorage.setItem("carType", carType);
+
+      window.location.href = "location.html";
+    });
+  </script>
+</body>
+</html>

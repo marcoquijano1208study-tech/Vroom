@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Store</title>
+
+  <link rel="stylesheet" href="createstore.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+  <div class="container">
+
+    <!-- Header -->
+    <div class="header">
+      <a href="settings.html" class="back-btn">
+        <i class="fa-solid fa-arrow-left"></i>
+      </a>
+      <h2 class="title">Create Store Service</h2>
+    </div>
+
+    <!-- Store Form -->
+    <form class="store-form" id="storeForm">
+
+      <label>Shop Name</label>
+      <input id="shopName" type="text" placeholder="Enter your shop name" required>
+
+      <label>Description</label>
+      <textarea id="shopDesc" placeholder="Write your shop description..." required></textarea>
+
+      <label>Location</label>
+      <input id="shopLocation" type="text" placeholder="Enter shop location" required>
+
+      <!-- ⭐ NEW: PHONE NUMBER -->
+      <label>Phone Number</label>
+      <input id="shopPhone" type="text" placeholder="Enter phone number" required>
+
+      <!-- ⭐ SERVICE LIST -->
+      <label>Services Offered</label>
+
+      <div id="service-list">
+        <div class="service-item">
+          <input class="serviceName" type="text" placeholder="Service Name (e.g. Oil Change)" required>
+
+          <!-- Price with comma formatting -->
+          <input class="servicePrice" type="text" placeholder="Price (₱)" required oninput="formatPrice(this)">
+        </div>
+      </div>
+
+      <!-- Add Service Button -->
+      <button type="button" id="add-services" class="add-btn">
+        + Add services
+      </button>
+
+      <button type="submit" class="submit-btn">Create Store</button>
+    </form>
+
+  </div>
+
+  <!-- PRICE FORMAT SCRIPT -->
+  <script>
+    function formatPrice(input) {
+        // Remove all NON numbers
+        let value = input.value.replace(/[^0-9]/g, "");
+
+        // Add commas
+        input.value = value.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+  </script>
+
+  <script src="createstore.js"></script>
+
+</body>
+</html>
